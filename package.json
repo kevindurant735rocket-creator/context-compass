@@ -1,0 +1,1 @@
+{"name":"context-compass","version":"0.1.0","description":"代码库罗盘 — 生成项目结构思维地图","bin":{"context-compass":"./bin/context-compass"},"type":"module"}

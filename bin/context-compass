@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+import {generateReport} from '../lib/analyzer.js';
+import fs from 'fs'; import path from 'path';
+const target=process.argv[2]||'.';
+const outDir=path.join(target,'.context-map');
+fs.mkdirSync(outDir,{recursive:true});
+const report=generateReport(path.resolve(target));
+fs.writeFileSync(path.join(outDir,'MAP.md'),report);
+console.log(`✓ 已生成 .context-map/MAP.md`);
